@@ -28,6 +28,7 @@ body {
     margin-left: auto;
     margin-right: auto;   
 }
+
 header {
     float: left;
     height: 74px;
@@ -192,7 +193,7 @@ h3 {
 footer {
     background-color: #666666;
     color: #aeb2b2;
-    position: relative;
+    position: fixed;
     left: 0;
     bottom: 0;
     height: 84px;
@@ -201,6 +202,7 @@ footer {
     border-top-style: solid;
     border-top-width: 10px;
     border-top-color: #4aaaa5;
+    z-index: 100;
  }
 
 .copyright {
@@ -282,3 +284,84 @@ input {
     background-color: #4aaaa5;
     border: none;
 }
+
+
+@media only screen 
+    and (max-width: 980px) {
+    .content-area {
+        width: 100%;
+    }
+    .about-me {
+        width: 320px;
+    }
+    .image {
+        float: none;
+    }    
+}
+
+@media only screen 
+    and (max-width: 768px) {
+    .header-area {
+        width: auto;
+    }
+    .content-area {
+        width: 100%;
+        padding-top: 0;
+    }
+    .about-me {
+        width: auto;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .aside {
+        width: auto;
+        float: none;
+    }
+    .image {
+        float: left;
+}
+
+@media only screen 
+    and (max-width: 640px) {
+    header {
+        position: static;
+        width: 100%
+    }
+    .name   {
+        width: 100%;
+        text-align: center;
+    }
+    nav {
+        width: 100%;
+        line-height: 40px;
+        background: white;
+    }
+
+    .nav-link {
+        width: 32%;
+    }
+    
+    .content-area {
+        width: auto;
+    }
+    
+    .about-me {
+        width: auto;
+    }
+    
+    .image {
+        float: none;
+    }    
+
+    footer {
+        position: fixed;
+    }
+}
+
+
+
+@viewport {
+    zoom: 1.0;
+    width: extend-to-zoom;
+}    
